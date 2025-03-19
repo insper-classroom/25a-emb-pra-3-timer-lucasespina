@@ -14,8 +14,8 @@ void setup_rtc() {
         .month = 3,
         .day   = 19,
         .dotw  = 2, 
-        .hour  = 22,
-        .min   = 10,
+        .hour  = 15,
+        .min   = 40,
         .sec   = 0
     };
     rtc_init();
@@ -86,7 +86,6 @@ int main() {
     printf("Digite 's' para iniciar as leituras.\n");
 
     while (true) {
-        // Declara 'command' aqui, onde é usado
         char command = getchar_timeout_us(100000);
         if (command == 's' && !reading_active) {
             reading_active = true;
